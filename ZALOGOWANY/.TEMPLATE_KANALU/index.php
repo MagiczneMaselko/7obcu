@@ -7,12 +7,14 @@
     <link rel="icon" href="golomp.jpg" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,1,0" />
     <?php
-    session_start();
-    if ($_SESSION['zalogowany'] === false) { 
-      die('Odmowa dostępu!');
-    }
-    #   /*&& $_SESSION['zalogowany'] !== */  dać warunek czy login uzytkownika NIE zgadza sie z nazwa folderu i wtedy powiadomienie- użytkownik nie znaleziony!
-
+      session_start();
+      if ($_SESSION['zalogowany'] === false) { 
+        die('Odmowa dostępu!');
+      }
+      $folder = __DIR__;   
+      if ($_SESSION['login'] !== basename($folder)) {
+        die('Nie znalezio użytkownika!');
+      }
     ?>
   </head>
   <body>

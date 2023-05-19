@@ -41,6 +41,9 @@
             }
             ?> 
             <br>
+            <?php
+
+            ?>
             <br>
             <br>
             <a href="rejestracja.php"> REJESTRACJA</a>
