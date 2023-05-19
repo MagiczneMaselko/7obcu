@@ -38,9 +38,6 @@ CREATE TABLE `zarejestrowani` (
 -- Zrzut danych tabeli `zarejestrowani`
 --
 
-INSERT INTO `zarejestrowani` (`ID_uzytkownika`, `login`, `haslo`, `email`) VALUES
-(88, 'admin', 'zaq1@WSX', 'admin@admin');
-
 --
 -- Indeksy dla zrzutów tabel
 --

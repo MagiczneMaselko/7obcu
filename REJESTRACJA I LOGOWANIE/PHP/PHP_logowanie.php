@@ -12,7 +12,7 @@ if (!empty($_POST['login'])) {
         if (mysqli_num_rows($wynik) === 1) {
             $_SESSION['zalogowany'] = true;
             $_SESSION['login'] = $login;
-            header("Location: /7obcu/zalogowany.php");
+            header("Location: /7obcu/ZALOGOWANY/$login/index.php");
         }
     } else {
         echo "Nieprawidłowy login lub hasło!";
