@@ -30,7 +30,7 @@
             <input type="submit" name="Załóż konto">
             <br>
             <?php 
-            include_once ('PHP/PHP_logowanie.php'); ?> <!--DOŁĄCZANIE PLIKU PHP (w razie czego zmienić ściezka)-->
+            include_once ('PHP/PHP_logowanie.php'); ?>
             <br>
             <br>
             <?php
