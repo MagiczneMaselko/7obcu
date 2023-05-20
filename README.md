@@ -68,4 +68,10 @@
                   <li>Wdrażanie systemu logowania do Dziupli Mareckiej</li>
                 </ul>
             </li>
+            <li>
+                20.05.2023:
+                <ul>
+                    <li>Połącznie dotychczasowego projektu Dziupli mareckiej z systemem logowania</li>
+                </ul>
+            </li>
         </ul>
