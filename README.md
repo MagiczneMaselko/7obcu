@@ -74,4 +74,10 @@
                     <li>Połącznie dotychczasowego projektu Dziupli mareckiej z systemem logowania</li>
                 </ul>
             </li>
+            <li>
+                22.05.2023:
+                <ul>
+                  <li>Drobna poprawa związana z logowaniem uzytkownika i jego folderem</li>
+                </ul>
+            </li>
         </ul>
