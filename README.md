@@ -1,60 +1,44 @@
 # 7obcu
-<h1>PATCH NOTES Dziupla Marecka 2.1</h1>
+<h1>Dziupla Marecka 2.1 (nazwa robocza: 7obcu)</h1>
         <h6>
             Serwis do przechowywania plików i czatowania z użytkownikami by: Magiczne Masełko#7312
             <br />
             <br />
             GIT: https://github.com/MagiczneMaselko
         </h6>
-        <h5></h5>
+        <h3>Plany na przyszłość:</h3>
+        <ul style="list-style-type:square">
+            <li>Modernizacja instrukcji warunkowych if</li>
+            <li>Przebudowa plików w załącznikach na klasy</li>
+            <li>Strona z czatem od strony klienta</li>
+            <li>Serwer i baza danych umożliwiająca połączenie ze sobą dwóch użytkowników</li>
+            <li>Funkcja czatowania pomiędzy użytkownikami w czasie rzeczywistym</li>
+            <li>CSS dla nowo utworzonych funkcji</li>
+            <li>Usuwanie oraz możliwość zmiany nazwy dla kanałów</li>
+        </ul>
+        <h3>Opis zmian:</h3>
         <ul class="list">
             <li>
-                17.11.2022:
+                0.8.5 - 22.05.2023:
                 <ul>
-                    <li>utworzenie PATCH notes'ów</li>
-                    <li>tworzenie kanału o wybranej nazwie</li>
-                    <li>
-                        tworzenie kanału o wybranej nazwie, modyfikacja jego zawartości
-                        (dodawanie/usuwanie plików)
-                    </li>
-                    <li>drobne poprawy kosmetyczne</li>
+                  <li>Drobna poprawa związana z logowaniem uzytkownika i jego folderem</li>
+                  <li>Rozpoczęcie prac nad czatem po stronie klienta</li>
                 </ul>
             </li>
             <li>
-                21.11.2022:
+                0.8 - 20.05.2023:
                 <ul>
-                    <li>zmiana szaty graficznej</li>
-                    <li>dodano stronę - work in progress</li>
-                    <li>przebudowa paska nawigacji</li>
+                    <li>Połącznie dotychczasowego projektu Dziupli mareckiej z systemem logowania</li>
                 </ul>
             </li>
             <li>
-                24.11.2022:
+                0.7 - 19.05.2023:
                 <ul>
-                    <li>style dla strony z dodawaniem kanału</li>
-                    <li>style dla strony z dodawaniem pliku do kanału</li>
-                    <li>poprawy kosmetyczne w tabeli z plikami</li>
+                  <li>Wdrażanie systemu logowania do Dziupli Mareckiej</li>
                 </ul>
             </li>
             <li>
-                30.11.2022:
-                <ul>
-                    <li>poprawienie kolorystyki i paska nawigacyjnego</li>
-                    <li>rozpoczęcie prac nad sesją logowania</li>
-                </ul>
-            </li>
-            <li>
-                01.12.2022:
-                <ul>
-                    <li>Poprawa wysokości stopki na stronach</li>
-                    <li>
-                        Dodanie strony 'Edycja Kanałów' wraz z CSS'em (bez funkcjonalności)
-                    </li>
-                    <li>Drobna korekta co do umiejscowienia przycisków</li>
-                </ul>
-            </li>
-            <li>
-                18.05.2023:
+                0.6 - 18.05.2023:
                 <ul>
                     <li>Wznowienie prac nad projektem</li>
                     <li>Utworzenie systemu logowania i rejestracji</li>
@@ -63,22 +47,43 @@
                 </ul>
             </li>
             <li>
-                19.05.2023:
+                0.5 - 01.12.2022:
                 <ul>
-                  <li>Wdrażanie systemu logowania do Dziupli Mareckiej</li>
+                    <li>Poprawa wysokości stopki na stronach</li>
+                    <li>Dodanie strony 'Edycja Kanałów' wraz z CSS'em (bez funkcjonalności)</li>
+                    <li>Drobna korekta co do umiejscowienia przycisków</li>
                 </ul>
             </li>
             <li>
-                20.05.2023:
+                0.4 - 30.11.2022:
                 <ul>
-                    <li>Połącznie dotychczasowego projektu Dziupli mareckiej z systemem logowania</li>
+                    <li>poprawienie kolorystyki i paska nawigacyjnego</li>
+                    <li>rozpoczęcie prac nad sesją logowania</li>
                 </ul>
             </li>
             <li>
-                22.05.2023:
+                0.3 - 24.11.2022:
                 <ul>
-                  <li>Drobna poprawa związana z logowaniem uzytkownika i jego folderem</li>
-                  <li>Rozpoczęcie prac nad czatem po stronie klienta</li>
+                    <li>style dla strony z dodawaniem kanału</li>
+                    <li>style dla strony z dodawaniem pliku do kanału</li>
+                    <li>poprawy kosmetyczne w tabeli z plikami</li>
+                </ul>
+            </li>
+            <li>
+                0.2 - 21.11.2022:
+                <ul>
+                    <li>zmiana szaty graficznej</li>
+                    <li>dodano stronę - work in progress</li>
+                    <li>przebudowa paska nawigacji</li>
+                </ul>
+            </li>
+            <li>
+                0.1 - 17.11.2022:
+                <ul>
+                    <li>utworzenie dziennika zmian</li>
+                    <li>tworzenie kanału o wybranej nazwie</li>
+                    <li>tworzenie kanału o wybranej nazwie, modyfikacja jego zawartości (dodawanie/usuwanie plików)</li>
+                    <li>drobne poprawy kosmetyczne</li>
                 </ul>
             </li>
         </ul>
