@@ -1,7 +1,7 @@
 # 7obcu
 <h1>PATCH NOTES Dziupla Marecka 2.1</h1>
         <h6>
-            Serwis do przechowywania plików by: Magiczne Masełko#7312
+            Serwis do przechowywania plików i czatowania z użytkownikami by: Magiczne Masełko#7312
             <br />
             <br />
             GIT: https://github.com/MagiczneMaselko
@@ -72,6 +72,13 @@
                 20.05.2023:
                 <ul>
                     <li>Połącznie dotychczasowego projektu Dziupli mareckiej z systemem logowania</li>
+                </ul>
+            </li>
+            <li>
+                22.05.2023:
+                <ul>
+                  <li>Drobna poprawa związana z logowaniem uzytkownika i jego folderem</li>
+                  <li>Rozpoczęcie prac nad czatem po stronie klienta</li>
                 </ul>
             </li>
         </ul>
