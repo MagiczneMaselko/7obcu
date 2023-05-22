@@ -1,45 +1,27 @@
 <!DOCTYPE html5>
-<html>
-    <head>
-        <meta charset="utf8">
-        <title>CZAT - PRE ALFA</title>
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <h1>CZAT GDZIES TUTAJ</h1>
-        <div class="blok_czatu"> 
-            <?php
-                $pol = mysqli_connect('localhost','root','','czat1');
-                $sql = "SELECT Wiadomosc , Godzina FROM wiadomosci;";
-                $wyn = mysqli_query($pol, $sql); 
-                echo "<ul>";
-                while($row=mysqli_fetch_row($wyn))
-                {
-                    echo "<li><p>$row[1] | $row[0]</p></li>";
-                }
-                echo "</ul>";
-                mysqli_close($pol);
-            ?>
-        </div>
-        <br>
-        <form method = "post">
-            <input type="text" name="wiad">
-            <br>
-            <br>
-            <input type="submit" value="Wyślij">
-            <br>
-            <?php
-                $pol = mysqli_connect('localhost','root','','czat1');
-                if(isset($_POST['wiad']) && !empty($_POST['wiad'])){
-                    $wiad = $_POST['wiad'];
-                    $sql = "INSERT INTO wiadomosci (`ID`, `Wiadomosc`) VALUES ('NULL' , $wiad);"; 
-                    if(mysqli_query($pol, $sql)){
-                        echo "DODANO NOWY REKORD.";
-                    } else{
-                        echo "ERROR $sql. " . mysqli_error($pol);
-                }
-            }
-            ?>
-        </form>
-    </body>
+<html lang="pl">
+
+<head>
+    <meta charset="utf8">
+    <title>CZAT - PRE ALFA</title>
+    <link href="style.css" rel="stylesheet">
+    <!-- Linki ponizej sa potrzebne do odpalenia React'a -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- Jakiś przykładowy kod
+      <script type="text/babel">
+        class Headline extends React.Component {
+          render() { //JSX
+            return <h1>hejo</h1>
+          }
+        }
+        ReactDOM.render(<Headline />, document.querySelector('#app')) //w reakcie uzywa sie tych wycofanych z html'a znacznikow zamykajacych
+      </script>
+      -->
+</body>
 </html>
