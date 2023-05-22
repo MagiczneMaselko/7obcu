@@ -7,15 +7,19 @@ if (!empty($_POST['login'])) {
     $result = mysqli_query($pol, $sprawdz);
     $row = mysqli_fetch_assoc($result);
     $zahashowane_haslo_z_bazy = $row['haslo'];
-    if (password_verify($haslo, $zahashowane_haslo_z_bazy)) {
-        $wynik = mysqli_query($pol, $sprawdz);
-        if (mysqli_num_rows($wynik) === 1) {
-            $_SESSION['zalogowany'] = true;
-            $_SESSION['login'] = $login;
-            header("Location: /7obcu/ZALOGOWANY/$login/index.php");
+    if (file_exists("./../ZALOGOWANY/$login")) {
+        if (password_verify($haslo, $zahashowane_haslo_z_bazy)) {
+            $wynik = mysqli_query($pol, $sprawdz);
+            if (mysqli_num_rows($wynik) === 1) {
+                $_SESSION['zalogowany'] = true;
+                $_SESSION['login'] = $login;
+                header("Location: /7obcu/ZALOGOWANY/$login/index.php");
+            }
+        } else {
+            echo "Nieprawidłowy login lub hasło!";
         }
     } else {
-        echo "Nieprawidłowy login lub hasło!";
+        echo "Nieznalezniono użytkownika!";
     }
 }
 
