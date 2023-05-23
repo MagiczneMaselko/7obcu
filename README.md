@@ -22,6 +22,7 @@
                 0.8.5.5 - 23.05.2023:
                 <ul>
                   <li>Aktualizacja struktury bazy danych (nowa baza: 7obcu.sql)</li>
+                  <li>Wyodrębnienie informacji potrzebnych łaczenia z bazą danych do zewnętrzengo plikuu</li>
                 </ul>
             </li>
             <li>

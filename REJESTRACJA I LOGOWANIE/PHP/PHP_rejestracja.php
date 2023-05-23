@@ -1,5 +1,6 @@
 <?php
-$pol = mysqli_connect('localhost', 'root', 'zaq1@WSX', 'rejestracja');
+include_once 'PHP_connect.php';
+$pol = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 if (!empty($_POST['login'])) {
     $login = $_POST['login'];                                                                                                            
     $haslo = $_POST['haslo'];                                                                                                           
@@ -13,6 +14,34 @@ if (!empty($_POST['login'])) {
     $sql = "INSERT INTO `zarejestrowani` (ID_uzytkownika, login, haslo, email) VALUES ('NULL', '$login' , '$szyfr_haslo' , '$email');";      
     $czy_ist = "SELECT '$login' FROM zarejestrowani WHERE `login`= '$login' OR `email` = '$email';";                                
     $wynik = mysqli_query($pol, $czy_ist);
+    if (!file_exists($login)) {
+        switch (mysqli_num_rows($wynik)) {
+            case 0:
+                if (password_verify($haslo, $szyfr_haslo)) {
+                    if (strlen($haslo) < 8 || !$liczba || !$duza_litera || !$mala_litera || !$znk_spec) {
+                        echo "Niepoprawna złożoność hasła";
+                    } elseif (mysqli_query($pol, $sql)) {
+                        include_once 'PHP_nowyfolderuzytkownika.php';
+                        echo "POMYŚLNIE ZAREJESTROWANO!";
+                    } else {
+                        echo "ERROR $sql. " . mysqli_error($pol);
+                    }
+                } else {
+                    echo "Hasła nie zgadzają się ze sobą!";
+                }
+                break;
+            default:
+                echo "Login lub email są już zajęte!";
+                break;
+        }
+    } else {
+        echo "Login lub email są już zajęte!";
+    }
+}
+mysqli_close($pol);
+
+
+/*
     if (!file_exists($login)) {
         if (mysqli_num_rows($wynik) == 0) {                                                                                             
             if (password_verify($haslo, $szyfr_haslo)) {                                                                                                   
@@ -33,5 +62,8 @@ if (!empty($_POST['login'])) {
     } else {
         echo "Login lub email są już zajęte!";
     }
-}
-mysqli_close($pol);
+
+
+
+
+*/

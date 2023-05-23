@@ -1,5 +1,6 @@
 <?php
-$pol = mysqli_connect('localhost', 'root', 'zaq1@WSX', 'rejestracja');
+include_once 'PHP_connect.php';
+$pol = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 if (!empty($_POST['login'])) {
     $login = $_POST['login'];
     $haslo = $_POST['haslo'];
