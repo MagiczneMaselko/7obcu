@@ -18,6 +18,12 @@
         </ul>
         <h3>Opis zmian:</h3>
         <ul class="list">
+        <li>
+                0.8.5.5 - 23.05.2023:
+                <ul>
+                  <li>Aktualizacja struktury bazy danych (nowa baza: 7obcu.sql)</li>
+                </ul>
+            </li>
             <li>
                 0.8.5 - 22.05.2023:
                 <ul>
